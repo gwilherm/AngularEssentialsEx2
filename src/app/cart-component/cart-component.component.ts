@@ -11,7 +11,9 @@ export class CartComponentComponent {
   newItem: string = '';
 
   onAddClick() {
-    this.itemAdded.emit(this.newItem);
-    this.newItem = '';
+    if (this.newItem !== '') {
+      this.itemAdded.emit(this.newItem);
+      this.newItem = '';
+    }
   }
 }

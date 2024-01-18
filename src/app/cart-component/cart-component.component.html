@@ -1,6 +1,9 @@
 <p>Content of the cart:</p>
 <input class="input" [(ngModel)]="newItem" />
-<button class="btn btn-primary" (click)="onAddClick()">Add Item</button>
+<button 
+    (click)="onAddClick()"
+    class="btn"
+    [ngClass]="{'btn-primary': newItem !== '', 'btn-default': newItem ===''}">Add Item</button>
 <hr>
 <ul class="list-group">
     <li class="list-group-item" *ngFor="let item of items">{{item}}</li>
