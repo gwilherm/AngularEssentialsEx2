@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'CodeSandbox';
+  rootItems = ['Apples', 'Bannas', 'Cherries'];
+
+  onItemAdded(newItem: string) {
+    this.rootItems.push(newItem);
+    console.log(this.rootItems);
+  }
 }

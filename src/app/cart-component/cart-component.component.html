@@ -1,0 +1,8 @@
+<p>Content of the cart:</p>
+<input [(ngModel)]="newItem" />
+<button (click)="onAddClick()">Add Item</button>
+<table>
+    <tr *ngFor="let item of items">
+        <td>{{item}}</td>
+    </tr>
+</table>
